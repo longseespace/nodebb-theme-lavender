@@ -3,7 +3,7 @@ $('document').ready(function() {
 		RELATIVE_PATH + '/css/assets/vendor/masonry.js',
 		RELATIVE_PATH + '/css/assets/vendor/imagesLoaded.js'
 	], function(Masonry, imagesLoaded) {
-		var fixed = localStorage.getItem('fixed') || 0,
+		var fixed = 0,
 			masonry;
 
 		function doMasonry() {
@@ -42,27 +42,35 @@ $('document').ready(function() {
 					resize(fixed);
 				}
 			}
-		});
 
-		var div = $('<div class="panel resizer pointer"><div class="panel-body"><i class="fa fa-bars fa-2x"></i></div></div>');
-		div.css({
-			position:'fixed',
-			bottom: '20px',
-			right: '20px'
-		}).hide().appendTo(document.body);
-
-		$(window).on('mousemove', function(ev) {
-			if (ev.clientX > $(window).width() - 150 && ev.clientY > $(window).height() - 150) {
-				div.fadeIn();
+			// hide the mainbar
+			if (data.url != "" && $(window).width() < 1080) {
+				$("#main-nav").hide();	
 			} else {
-				div.stop(true, true).fadeOut();
+				$("#main-nav").show();
 			}
+
 		});
 
-		div.on('click', function() {
-			fixed = parseInt(fixed, 10) === 1 ? 0 : 1;
-			resize(fixed);
-		});
+		// var div = $('<div class="panel resizer pointer"><div class="panel-body"><i class="fa fa-bars fa-2x"></i></div></div>');
+		// div.css({
+		// 	position:'fixed',
+		// 	bottom: '20px',
+		// 	right: '20px'
+		// }).hide().appendTo(document.body);
+
+		// $(window).on('mousemove', function(ev) {
+		// 	if (ev.clientX > $(window).width() - 150 && ev.clientY > $(window).height() - 150) {
+		// 		div.fadeIn();
+		// 	} else {
+		// 		div.stop(true, true).fadeOut();
+		// 	}
+		// });
+
+		// div.on('click', function() {
+		// 	fixed = parseInt(fixed, 10) === 1 ? 0 : 1;
+		// 	resize(fixed);
+		// });
 	});
 
 	(function() {

@@ -596,11 +596,11 @@ div ul a.main {
 
 .ext-sites, .start, .signin {
   float: left;
-  margin-left: 50px
+  margin-left: 30px
 }
 
-@media screen and (max-width: 995px) {
-	div.inair .ext-sites { display: none !important; }
+@media screen and (max-width: 999px) {
+	#main-nav { display: none !important; }
 }
 
 .d-header {
@@ -669,9 +669,6 @@ a.badge-category {
 }
 
 #nodebb-menu { 
-	#main-nav {
-		margin-left: 70px;
-	}
 	.nav>li>a {
 		color: #bababa;
 	}
@@ -684,7 +681,11 @@ a.badge-category {
 	color: #bababa;
 }
 
-.header .header-topic-title span {
+.header .header-topic-title span, .header .header-topic-title {
 	color: #fff;
 }
 
+
+.container {
+	width: 95%;
+}

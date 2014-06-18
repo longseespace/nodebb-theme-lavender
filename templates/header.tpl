@@ -7,6 +7,7 @@
 	<meta name = "viewport" content = "initial-scale = 1.0, user-scalable = no">
 	<!-- END metaTags -->
 	<link rel="stylesheet" type="text/css" href="{relative_path}/stylesheet.css?{cache-buster}" />
+	<link rel="stylesheet" type="text/css" href="http://developer.inair.tv/documents/inair.css?{cache-buster}">
 	<!-- BEGIN linkTags -->
 	<link<!-- IF linkTags.link --> link="{linkTags.link}"<!-- ENDIF linkTags.link --><!-- IF linkTags.rel --> rel="{linkTags.rel}"<!-- ENDIF linkTags.rel --><!-- IF linkTags.type --> type="{linkTags.type}"<!-- ENDIF linkTags.type --><!-- IF linkTags.href --> href="{linkTags.href}"<!-- ENDIF linkTags.href --> />
 	<!-- END linkTags -->
@@ -56,6 +57,19 @@
         <span id="blog_link"><a target="_blank" href="http://blog.inair.tv">Blog</a></span>
         <span id="blog_link"><a target="_blank" href="https://github.com/seespace/inair-sdk/issues">Issues</a></span>
       </span>
+
+      <ul class="nav navbar-nav navbar-right" id="dropdown-menu">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forum <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="/">Forum</a></li>
+            <li><a href="/documents/docs.html">API</a></li>
+            <li><a href="/knowledgebase/index.php">Guides</a></li>
+            <li><a target="_blank" href="http://blog.inair.tv">Blog</a></li>
+            <li><a target="_blank" href="https://github.com/seespace/inair-sdk/issues">Issues</a></li>
+          </ul>
+        </li>
+      </ul>
 
       <div id="nodebb-menu">
 				<!-- IMPORT partials/menu.tpl -->
