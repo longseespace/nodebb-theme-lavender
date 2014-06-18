@@ -4,6 +4,7 @@
 	<title>{browserTitle}</title>
 	<!-- BEGIN metaTags -->
 	{function.buildMetaTag}
+	<meta name = "viewport" content = "initial-scale = 1.0, user-scalable = no">
 	<!-- END metaTags -->
 	<link rel="stylesheet" type="text/css" href="{relative_path}/stylesheet.css?{cache-buster}" />
 	<!-- BEGIN linkTags -->
@@ -33,10 +34,32 @@
 </head>
 
 <body>
-	<div class="navbar navbar-default navbar-fixed-top header" role="navigation" id="header-menu">
+	<div class="inair header" role="navigation" id="header-menu">
 		<div class="loading-bar"></div>
 		<div class="container">
-			<!-- IMPORT partials/menu.tpl -->
+
+<!-- 			<div class="logo">
+			  <a href="/">
+			    <img alt="InAiR" src="http://inair.tv/wp-content/uploads/2014/03/logo.png">
+			  </a>
+			</div> -->
+			<ul class="site">
+			  <li>
+			    <a href="/" class="main" style="font-size: 16px; font-weight: 100; position: relative; padding: 15px 0 15px 8px;"><strong>InAir</strong> Developer<span id="alpha" style="position: absolute;font-size: 10px;top: -12px;right: 0;">alpha</span></a>
+			  </li>
+			</ul>
+
+			<span class="ext-sites rel">
+        <span class="on"><a href="/">Forum</a></span>
+        <span><a href="/documents/docs.html">API</a></span>
+        <span><a href="/knowledgebase/index.php">Guides</a></span>
+        <span id="blog_link"><a target="_blank" href="http://blog.inair.tv">Blog</a></span>
+        <span id="blog_link"><a target="_blank" href="https://github.com/seespace/inair-sdk/issues">Issues</a></span>
+      </span>
+
+      <div id="nodebb-menu">
+				<!-- IMPORT partials/menu.tpl -->
+			</div>
 		</div>
 	</div>
 
